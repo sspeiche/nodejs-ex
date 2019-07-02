@@ -120,6 +120,11 @@ initDb(function(err){
 });
 
 app.listen(port, ip);
+kill
 console.log('Server running on http://%s:%s', ip, port);
+
+setTimeout((function() {  
+  return process.exit(2);
+}), 0);
 
 module.exports = app ;
